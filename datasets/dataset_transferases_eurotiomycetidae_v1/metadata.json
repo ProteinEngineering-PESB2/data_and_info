@@ -1,0 +1,31 @@
+{
+  "name": "transferases_Eurotiomycetidae",
+  "version": "1.0.0",
+  "description": "UniProtKB entries filtered by Eurotiomycetidae (taxon 451871), EC 2.*, non-fragments, length 100\u2013800 aa.",
+  "query": "taxonomy_id:451871 AND ec:2.* AND fragment:false AND length:[100 TO 800]",
+  "count": 500,
+  "license": "UniProt Terms of Use",
+  "source": [
+    {
+      "database": "UniProtKB",
+      "endpoint": "https://rest.uniprot.org/uniprotkb/search"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "transferases_Eurotiomycetidae.csv",
+      "size": 336050,
+      "sha256": "597122419e5d4cce1dc48e83047570225694f04d29647cd17f16b0543a25017c",
+      "kind": "table",
+      "format": "csv",
+      "primary": true
+    },
+    {
+      "path": "transferases_Eurotiomycetidae.fasta",
+      "size": 256996,
+      "sha256": "21460010c28466133b2ad001deea5fa22bf4df14c0c9f44c43482233c75e2ef3",
+      "kind": "sequences",
+      "format": "fasta"
+    }
+  ]
+}

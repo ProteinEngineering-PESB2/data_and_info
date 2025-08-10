@@ -1,0 +1,31 @@
+{
+  "name": "oxidoreductases_aspergillaceae",
+  "version": "1.0.0",
+  "description": "UniProtKB entries filtered by Aspergillaceae (taxon 1131492), EC 1.*, non-fragments, length 100\u2013800 aa.",
+  "query": "taxonomy_id:1131492 AND ec:1.* AND fragment:false AND length:[100 TO 800]",
+  "count": 500,
+  "license": "UniProt Terms of Use",
+  "source": [
+    {
+      "database": "UniProtKB",
+      "endpoint": "https://rest.uniprot.org/uniprotkb/search"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "oxidoreductases_aspergillaceae.csv",
+      "size": 341519,
+      "sha256": "f0dbf709d2283fa96871a24d11c3b6cb0ef8ad068a846f8229ba3ec378f544e8",
+      "kind": "table",
+      "format": "csv",
+      "primary": true
+    },
+    {
+      "path": "oxidoreductases_aspergillaceae.fasta",
+      "size": 264847,
+      "sha256": "7490b16b9539a233f4407e965726d98328c9eb3239e389453a79771cff2cde73",
+      "kind": "sequences",
+      "format": "fasta"
+    }
+  ]
+}
