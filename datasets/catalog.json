@@ -1,0 +1,292 @@
+{
+  "generated_at": "2025-08-23T15:58:11Z",
+  "datasets": [
+    {
+      "name": "oxidoreductases_aspergillaceae",
+      "slug": "oxidoreductases_aspergillaceae",
+      "title": "oxidoreductases_aspergillaceae",
+      "version": "1.0.0",
+      "license": "UniProt Terms of Use",
+      "description": "UniProtKB-derived dataset for 'oxidoreductases_aspergillaceae'.",
+      "tasks": [
+        "multi_label_classification"
+      ],
+      "labels": [
+        "ec"
+      ],
+      "artifacts": [
+        {
+          "path": "oxidoreductases_aspergillaceae.csv",
+          "sha256": "e02afbf721058e2f8adbe363a52d8c010d2278e27b3d5690ac5c8a500b3ead91",
+          "size": 2034342,
+          "kind": "table",
+          "format": "csv",
+          "primary": true,
+          "url": "https://raw.githubusercontent.com/ProteinEngineering-PESB2/data_and_info/main/datasets/oxidoreductases_aspergillaceae_v1/oxidoreductases_aspergillaceae.csv"
+        },
+        {
+          "path": "oxidoreductases_aspergillaceae.fasta",
+          "sha256": "01ee2dfe9fc9543c0aa5ba40395b72a6c56c9e5b59521f6aa2042fe1948d8061",
+          "size": 1565919,
+          "kind": "sequences",
+          "format": "fasta",
+          "url": "https://raw.githubusercontent.com/ProteinEngineering-PESB2/data_and_info/main/datasets/oxidoreductases_aspergillaceae_v1/oxidoreductases_aspergillaceae.fasta"
+        }
+      ],
+      "license_id": "LicenseRef-UniProt-Terms",
+      "license_url": "https://www.uniprot.org/help/license",
+      "count": 3000,
+      "size_total": 3600261,
+      "source": [
+        {
+          "database": "UniProtKB",
+          "endpoint": "https://rest.uniprot.org/uniprotkb/search",
+          "database_release": null,
+          "retrieved_at": "2025-08-23T15:42:42Z"
+        }
+      ],
+      "extras": {
+        "filters": {
+          "taxonomy_id": [
+            1131492
+          ],
+          "ec_list": [
+            "1.*"
+          ],
+          "fragment": false,
+          "reviewed": null,
+          "length_range": [
+            100,
+            800
+          ],
+          "include": [
+            "keyword:Oxidoreductase"
+          ],
+          "exclude": [
+            "fragment:true"
+          ]
+        },
+        "schema": {
+          "primaryKey": "accession",
+          "fields": [
+            {
+              "name": "accession",
+              "type": "string",
+              "constraints": {
+                "required": true,
+                "unique": true
+              }
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "protein_name",
+              "type": "string"
+            },
+            {
+              "name": "gene_primary",
+              "type": "string"
+            },
+            {
+              "name": "organism_name",
+              "type": "string"
+            },
+            {
+              "name": "length",
+              "type": "integer",
+              "constraints": {
+                "minimum": 1
+              }
+            },
+            {
+              "name": "sequence",
+              "type": "string",
+              "constraints": {
+                "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+              }
+            },
+            {
+              "name": "ec",
+              "type": "string",
+              "description": "Semicolon-separated EC numbers"
+            },
+            {
+              "name": "go_id",
+              "type": "string",
+              "description": "Semicolon-separated GO IDs"
+            },
+            {
+              "name": "protein_existence",
+              "type": "string"
+            },
+            {
+              "name": "xref_pdb",
+              "type": "string"
+            },
+            {
+              "name": "xref_alphafolddb",
+              "type": "string"
+            }
+          ]
+        },
+        "class_stats": {
+          "rows": 3000,
+          "length_avg": 464.021333,
+          "length_min": 108,
+          "length_max": 795,
+          "ec_nonnull": 2993,
+          "go_id_nonnull": 2998,
+          "xref_pdb_nonnull": 34,
+          "xref_alphafolddb_nonnull": 2413
+        },
+        "splits": null,
+        "label_sep": ";",
+        "query": "taxonomy_id:1131492 AND ec:1.* AND length:[100 TO 800] AND fragment:false AND keyword:Oxidoreductase AND NOT (fragment:true)"
+      }
+    },
+    {
+      "name": "transferases_eurotiomycetidae",
+      "slug": "transferases_eurotiomycetidae",
+      "title": "transferases_eurotiomycetidae",
+      "version": "1.0.0",
+      "license": "UniProt Terms of Use",
+      "description": "UniProtKB-derived dataset for 'transferases_eurotiomycetidae'.",
+      "tasks": [
+        "multi_label_classification"
+      ],
+      "labels": [
+        "ec"
+      ],
+      "artifacts": [
+        {
+          "path": "transferases_eurotiomycetidae.csv",
+          "sha256": "597122419e5d4cce1dc48e83047570225694f04d29647cd17f16b0543a25017c",
+          "size": 336050,
+          "kind": "table",
+          "format": "csv",
+          "primary": true,
+          "url": "https://raw.githubusercontent.com/ProteinEngineering-PESB2/data_and_info/main/datasets/transferases_eurotiomycetidae_v1/transferases_eurotiomycetidae.csv"
+        },
+        {
+          "path": "transferases_eurotiomycetidae.fasta",
+          "sha256": "21460010c28466133b2ad001deea5fa22bf4df14c0c9f44c43482233c75e2ef3",
+          "size": 256996,
+          "kind": "sequences",
+          "format": "fasta",
+          "url": "https://raw.githubusercontent.com/ProteinEngineering-PESB2/data_and_info/main/datasets/transferases_eurotiomycetidae_v1/transferases_eurotiomycetidae.fasta"
+        }
+      ],
+      "license_id": "LicenseRef-UniProt-Terms",
+      "license_url": "https://www.uniprot.org/help/license",
+      "count": 500,
+      "size_total": 593046,
+      "source": [
+        {
+          "database": "UniProtKB",
+          "endpoint": "https://rest.uniprot.org/uniprotkb/search",
+          "database_release": "2025_03",
+          "retrieved_at": "2025-08-23T13:45:00Z"
+        }
+      ],
+      "extras": {
+        "filters": {
+          "taxonomy_id": [
+            451871
+          ],
+          "ec_list": [
+            "2.*"
+          ],
+          "fragment": false,
+          "reviewed": true,
+          "length_range": [
+            100,
+            800
+          ],
+          "include": null,
+          "exclude": null
+        },
+        "schema": {
+          "primaryKey": "accession",
+          "fields": [
+            {
+              "name": "accession",
+              "type": "string",
+              "constraints": {
+                "required": true,
+                "unique": true
+              }
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "protein_name",
+              "type": "string"
+            },
+            {
+              "name": "gene_primary",
+              "type": "string"
+            },
+            {
+              "name": "organism_name",
+              "type": "string"
+            },
+            {
+              "name": "length",
+              "type": "integer",
+              "constraints": {
+                "minimum": 1
+              }
+            },
+            {
+              "name": "sequence",
+              "type": "string",
+              "constraints": {
+                "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+              }
+            },
+            {
+              "name": "ec",
+              "type": "string",
+              "description": "Semicolon-separated EC numbers"
+            },
+            {
+              "name": "go_id",
+              "type": "string",
+              "description": "Semicolon-separated GO IDs"
+            },
+            {
+              "name": "protein_existence",
+              "type": "string"
+            },
+            {
+              "name": "xref_pdb",
+              "type": "string"
+            },
+            {
+              "name": "xref_alphafolddb",
+              "type": "string"
+            }
+          ]
+        },
+        "class_stats": {
+          "rows": 500,
+          "length_avg": 437.714,
+          "length_min": 151,
+          "length_max": 795,
+          "ec_nonnull": 448,
+          "go_id_nonnull": 500,
+          "xref_pdb_nonnull": 31,
+          "xref_alphafolddb_nonnull": 495
+        },
+        "splits": null,
+        "label_sep": ";",
+        "query": "taxonomy_id:451871 AND ec:2.* AND length:[100 TO 800] AND fragment:false AND reviewed:true"
+      }
+    }
+  ],
+  "base_url": "https://raw.githubusercontent.com/ProteinEngineering-PESB2/data_and_info/main/datasets"
+}
