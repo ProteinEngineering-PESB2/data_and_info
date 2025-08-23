@@ -1,0 +1,139 @@
+{
+  "name": "oxidoreductases_aspergillaceae",
+  "slug": "oxidoreductases_aspergillaceae",
+  "version": "1.0.0",
+  "description": "UniProtKB-derived dataset for 'oxidoreductases_aspergillaceae'.",
+  "task": "multi_label_classification",
+  "labels": [
+    "ec"
+  ],
+  "label_sep": ";",
+  "query": "taxonomy_id:1131492 AND ec:1.* AND length:[100 TO 800] AND fragment:false AND keyword:Oxidoreductase AND NOT (fragment:true)",
+  "filters": {
+    "taxonomy_id": [
+      1131492
+    ],
+    "ec_list": [
+      "1.*"
+    ],
+    "fragment": false,
+    "reviewed": null,
+    "length_range": [
+      100,
+      800
+    ],
+    "include": [
+      "keyword:Oxidoreductase"
+    ],
+    "exclude": [
+      "fragment:true"
+    ]
+  },
+  "count": 3000,
+  "class_stats": {
+    "rows": 3000,
+    "length_avg": 464.021333,
+    "length_min": 108,
+    "length_max": 795,
+    "ec_nonnull": 2993,
+    "go_id_nonnull": 2998,
+    "xref_pdb_nonnull": 34,
+    "xref_alphafolddb_nonnull": 2413
+  },
+  "license": "UniProt Terms of Use",
+  "license_id": "LicenseRef-UniProt-Terms",
+  "license_url": "https://www.uniprot.org/help/license",
+  "source": [
+    {
+      "database": "UniProtKB",
+      "endpoint": "https://rest.uniprot.org/uniprotkb/search",
+      "database_release": null,
+      "retrieved_at": "2025-08-23T15:42:42Z"
+    }
+  ],
+  "schema": {
+    "primaryKey": "accession",
+    "fields": [
+      {
+        "name": "accession",
+        "type": "string",
+        "constraints": {
+          "required": true,
+          "unique": true
+        }
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "protein_name",
+        "type": "string"
+      },
+      {
+        "name": "gene_primary",
+        "type": "string"
+      },
+      {
+        "name": "organism_name",
+        "type": "string"
+      },
+      {
+        "name": "length",
+        "type": "integer",
+        "constraints": {
+          "minimum": 1
+        }
+      },
+      {
+        "name": "sequence",
+        "type": "string",
+        "constraints": {
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+        }
+      },
+      {
+        "name": "ec",
+        "type": "string",
+        "description": "Semicolon-separated EC numbers"
+      },
+      {
+        "name": "go_id",
+        "type": "string",
+        "description": "Semicolon-separated GO IDs"
+      },
+      {
+        "name": "protein_existence",
+        "type": "string"
+      },
+      {
+        "name": "xref_pdb",
+        "type": "string"
+      },
+      {
+        "name": "xref_alphafolddb",
+        "type": "string"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "kind": "table",
+      "format": "csv",
+      "path": "oxidoreductases_aspergillaceae.csv",
+      "primary": true,
+      "size": 2034342,
+      "sha256": "e02afbf721058e2f8adbe363a52d8c010d2278e27b3d5690ac5c8a500b3ead91",
+      "media_type": "text/csv"
+    },
+    {
+      "kind": "sequences",
+      "format": "fasta",
+      "path": "oxidoreductases_aspergillaceae.fasta",
+      "size": 1565919,
+      "sha256": "01ee2dfe9fc9543c0aa5ba40395b72a6c56c9e5b59521f6aa2042fe1948d8061",
+      "media_type": "chemical/seq+fasta"
+    }
+  ],
+  "size_total": 3600261
+}

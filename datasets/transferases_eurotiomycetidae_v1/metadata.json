@@ -1,0 +1,135 @@
+{
+  "name": "transferases_eurotiomycetidae",
+  "slug": "transferases_eurotiomycetidae",
+  "version": "1.0.0",
+  "description": "UniProtKB-derived dataset for 'transferases_eurotiomycetidae'.",
+  "task": "multi_label_classification",
+  "labels": [
+    "ec"
+  ],
+  "label_sep": ";",
+  "query": "taxonomy_id:451871 AND ec:2.* AND length:[100 TO 800] AND fragment:false AND reviewed:true",
+  "filters": {
+    "taxonomy_id": [
+      451871
+    ],
+    "ec_list": [
+      "2.*"
+    ],
+    "fragment": false,
+    "reviewed": true,
+    "length_range": [
+      100,
+      800
+    ],
+    "include": null,
+    "exclude": null
+  },
+  "count": 500,
+  "class_stats": {
+    "rows": 500,
+    "length_avg": 437.714,
+    "length_min": 151,
+    "length_max": 795,
+    "ec_nonnull": 448,
+    "go_id_nonnull": 500,
+    "xref_pdb_nonnull": 31,
+    "xref_alphafolddb_nonnull": 495
+  },
+  "license": "UniProt Terms of Use",
+  "license_id": "LicenseRef-UniProt-Terms",
+  "license_url": "https://www.uniprot.org/help/license",
+  "source": [
+    {
+      "database": "UniProtKB",
+      "endpoint": "https://rest.uniprot.org/uniprotkb/search",
+      "database_release": "2025_03",
+      "retrieved_at": "2025-08-23T13:45:00Z"
+    }
+  ],
+  "schema": {
+    "primaryKey": "accession",
+    "fields": [
+      {
+        "name": "accession",
+        "type": "string",
+        "constraints": {
+          "required": true,
+          "unique": true
+        }
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "protein_name",
+        "type": "string"
+      },
+      {
+        "name": "gene_primary",
+        "type": "string"
+      },
+      {
+        "name": "organism_name",
+        "type": "string"
+      },
+      {
+        "name": "length",
+        "type": "integer",
+        "constraints": {
+          "minimum": 1
+        }
+      },
+      {
+        "name": "sequence",
+        "type": "string",
+        "constraints": {
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+        }
+      },
+      {
+        "name": "ec",
+        "type": "string",
+        "description": "Semicolon-separated EC numbers"
+      },
+      {
+        "name": "go_id",
+        "type": "string",
+        "description": "Semicolon-separated GO IDs"
+      },
+      {
+        "name": "protein_existence",
+        "type": "string"
+      },
+      {
+        "name": "xref_pdb",
+        "type": "string"
+      },
+      {
+        "name": "xref_alphafolddb",
+        "type": "string"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "kind": "table",
+      "format": "csv",
+      "path": "transferases_eurotiomycetidae.csv",
+      "primary": true,
+      "size": 336050,
+      "sha256": "597122419e5d4cce1dc48e83047570225694f04d29647cd17f16b0543a25017c",
+      "media_type": "text/csv"
+    },
+    {
+      "kind": "sequences",
+      "format": "fasta",
+      "path": "transferases_eurotiomycetidae.fasta",
+      "size": 256996,
+      "sha256": "21460010c28466133b2ad001deea5fa22bf4df14c0c9f44c43482233c75e2ef3",
+      "media_type": "chemical/seq+fasta"
+    }
+  ],
+  "size_total": 593046
+}
